@@ -72,8 +72,8 @@ type ReadObjGroupResp struct {
 	ArrayFlattenDepth  *int
 	ColumnRenames      map[string]string
 	ColumnSelection    []map[string]interface{}
-	ArraySelection     []map[string]interface{} `json:"arraySelection"`
-	FieldSelection     []map[string]interface{} `json:"fieldSelection"`
+	ArraySelection     string
+	FieldSelection     string
 }
 
 type CreateObjectGroupRequest struct {
