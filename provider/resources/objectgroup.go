@@ -305,14 +305,14 @@ func resourceObjectGroupCreate(ctx context.Context, data *schema.ResourceData, m
 		}
 
 		if formatMap["array_selection"] != nil {
-			err := json.Unmarshal(formatMap["array_selection"].([]byte), &arraySelection)
+			err := json.Unmarshal([]byte(formatMap["array_selection"].(string)), &arraySelection)
 			if err != nil {
 				return diag.FromErr(utils.UnmarshalJsonError(err))
 			}
 		}
 
 		if formatMap["field_selection"] != nil {
-			err := json.Unmarshal(formatMap["field_selection"].([]byte), &fieldSelection)
+			err := json.Unmarshal([]byte(formatMap["field_selection"].(string)), &fieldSelection)
 			if err != nil {
 				return diag.FromErr(utils.UnmarshalJsonError(err))
 			}
