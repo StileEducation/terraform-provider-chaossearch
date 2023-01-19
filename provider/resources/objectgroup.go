@@ -326,8 +326,8 @@ func resourceObjectGroupCreate(ctx context.Context, data *schema.ResourceData, m
 			ArrayFlattenDepth: arrayFlattenDepth,
 			StripPrefix:       stripPrefix,
 			Horizontal:        horizontal,
-			ArraySelection:    arraySelection,
-			FieldSelection:    fieldSelection,
+			ArraySelection:    &arraySelection,
+			FieldSelection:    &fieldSelection,
 		}
 	}
 
